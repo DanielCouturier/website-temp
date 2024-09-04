@@ -37,11 +37,9 @@ body {
 .top-bar nav {
     background-color: #888;
     display: flex;
-    padding-top: 10px;
-    padding-bottom: 10px;
     justify-content: center;
     align-items: center;
-
+    height: 6vh;
 
     ul {
         list-style-type: none;
