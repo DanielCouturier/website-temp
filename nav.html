@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Senior Design Project Site</title>
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="home.css">
+
+</head>
+
+<body>
+    <div class="top-bar"> <!-- links to load each document-->
+        <nav>
+            <ul> <!-- add more here over time, update switch in js too -->
+                <li><a id="defaultPage" href="#" onclick="changeSrc('plan-home', this)">Home</a></li>
+                <li><a id= "planDocument" href="#" onclick="changeSrc('plan-document')">Plan Document</a></li>
+                <li><a id = "planPresentation" href="#" onclick="changeSrc('plan-presentation')">Plan Presentation</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="embed-container">
+        <!--covers iframe while loading for responsiveness-->
+        <div class="loading" id="loadingOverlay">Loading...</div>
+        <!--Home page here, simpler than embedding with jquery-->
+        <div class="project-info" id = "home-frame"> 
+            <h1>Sentiment Analysis for Software Feedback</h1>
+            <div>
+                <h2>Team Members</h2>
+                <table>
+                    <tr>
+                        <td>Adam Canadate</td>
+                        <td>Daniel Couturier</td>
+                        <td>Evan Thompson</td>
+                    </tr>
+                    <tr>
+                        <td>acanadate2020@my.fit.edu</td>
+                        <td>dcouturier2022@my.fit.edu</td>
+                        <td>thompsone2021@my.fit.edu</td>
+                    </tr>
+                </table>
+                <h2>Project Advisor: </h2>
+                <p>Khaled Slhoub (slhoub@fit.edu) </p>
+            </div>
+            <hr>
+            <div>
+                <h2>First Semester</h2>
+                <table>
+                    <tr>
+                        <th>Plan (Sep 4)</th>
+                        <td><a href="#" onclick="changeSrc('plan-document')">Plan</a></td>
+                        <td><a href="#" onclick="changeSrc('plan-presentation')">Presentation</a></td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 1 (Sep 30)</th>
+                        <td>Requirements</td>
+                        <td>Design</td>
+                        <td>Test</td>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 2 (Oct 28)</th>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 3 (Nov 25)</th>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+            <div>
+                <h2>Second Semester</h2>
+                <table>
+                    <tr>
+                        <th>Plan (Sep 4)</th>
+                        <td>Plan</td>
+                        <td>Presentation</td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 1 (Sep 30)</th>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 2 (Oct 28)</th>
+                        <td>Poster</td>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                    <tr>
+                        <th>Milestone 3 (Nov 25)</th>
+                        <td>User Manual</td>
+                        <td>Demo Video</td>
+                        <td>Presentation</td>
+                        <td>Progress Evaluation</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!--main content for external documents-->
+        <iframe class="embed" id="embedFrame" src="" allowfullscreen onload="onLoadComplete()"></iframe>
+    </div>
+
+    <script src="nav.js"></script>
+</body>
+
+</html>
